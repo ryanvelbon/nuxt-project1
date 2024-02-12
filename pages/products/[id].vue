@@ -10,6 +10,10 @@ if (!product.value) {
 </script>
 
 <template>
+    <Head>
+        <Title>Nuxt | {{ product.title }}</Title>
+        <Meta name="description" :content="product.description" />
+    </Head>
     <div class="container">
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
             <div class="lg:col-span-2">
