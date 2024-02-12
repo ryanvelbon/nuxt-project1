@@ -1,25 +1,41 @@
 <script setup>
-
+const isScrolled = ref(false)
+function handleScroll() {
+    isScrolled.value = window.scrollY > 0
+}
+onMounted(() => {
+    window.addEventListener('scroll', handleScroll)
+})
+onUnmounted(() => {
+    window.removeEventListener('scroll', handleScroll)
+})
 </script>
 
 <template>
     <header>
-        <NuxtLink to="/">Home</NuxtLink>
-        <nav>
-            <ul>
-                <li><NuxtLink to="/about">About</NuxtLink></li>
-                <li><NuxtLink to="/services">Services</NuxtLink></li>
-            </ul>
-        </nav>
+        <div
+            class="fixed top-0 w-full z-20 bg-white"
+            :class="isScrolled ? 'shadow-lg' : ''"
+        >
+            <div class="container flex justify-between py-4">
+                <NuxtLink to="/">Home</NuxtLink>
+                <nav>
+                    <ul class="flex space-x-4">
+                        <li><NuxtLink to="/about">About</NuxtLink></li>
+                        <li><NuxtLink to="/services">Services</NuxtLink></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
     </header>
 
-    <main>
+    <main class="pt-16">
         <slot />
     </main>
 </template>
 
 <style scoped>
 .router-link-exact-active {
-    color: #4f3;
+    @apply text-primary-500;
 }
 </style>
