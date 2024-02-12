@@ -20,16 +20,17 @@ onUnmounted(() => {
             <div class="container flex justify-between py-4">
                 <NuxtLink to="/">Home</NuxtLink>
                 <nav>
-                    <ul class="flex space-x-4">
-                        <li><NuxtLink to="/about">About</NuxtLink></li>
+                    <ul class="flex space-x-8">
+                        <li><NuxtLink to="/products">Shop</NuxtLink></li>
                         <li><NuxtLink to="/services">Services</NuxtLink></li>
+                        <li><NuxtLink to="/about">About</NuxtLink></li>
                     </ul>
                 </nav>
             </div>
         </div>
     </header>
 
-    <main class="pt-16">
+    <main class="pt-24">
         <slot />
     </main>
 </template>
