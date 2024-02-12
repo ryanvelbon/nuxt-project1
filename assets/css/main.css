@@ -2,6 +2,34 @@
 @tailwind components;
 @tailwind utilities;
 
+.btn {
+    @apply px-5 py-2.5 text-sm font-medium focus:ring-4 focus:outline-none rounded-lg text-center;
+}
+
+.btn-xs {
+    @apply px-3 py-2 text-xs;
+}
+
+.btn-sm {
+    @apply px-3 py-2 text-sm;
+}
+
+.btn-lg {
+    @apply px-5 py-3 text-base;
+}
+
+.btn-xl {
+    @apply px-6 py-3.5 text-base;
+}
+
+.btn-primary {
+    @apply text-white bg-primary-700 hover:bg-primary-800 focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800;
+}
+
+.btn-secondary {
+    @apply text-white bg-secondary-700 hover:bg-secondary-800 focus:ring-secondary-300 dark:bg-secondary-600 dark:hover:bg-secondary-700 dark:focus:ring-secondary-800;
+}
+
 .container {
     @apply mx-auto max-w-7xl px-4 sm:px-6 lg:px-8;
 }
