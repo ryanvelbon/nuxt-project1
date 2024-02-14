@@ -22,6 +22,7 @@ onUnmounted(() => {
                 <nav>
                     <ul class="flex space-x-8">
                         <li><NuxtLink to="/products">Shop</NuxtLink></li>
+                        <li><NuxtLink to="/cart">🛒</NuxtLink></li>
                         <li><NuxtLink to="/services">Services</NuxtLink></li>
                         <li><NuxtLink to="/about">About</NuxtLink></li>
                     </ul>
