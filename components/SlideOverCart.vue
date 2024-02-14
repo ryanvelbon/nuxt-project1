@@ -1,7 +1,8 @@
 <script setup>
-import { ref } from 'vue'
 import { Dialog, DialogPanel, DialogTitle, TransitionChild, TransitionRoot } from '@headlessui/vue'
 import { XMarkIcon } from '@heroicons/vue/24/outline'
+
+const cartStore = useCartStore()
 
 const products = [
     {
@@ -28,12 +29,11 @@ const products = [
     // More products...
 ]
 
-const open = ref(true)
 </script>
 
 <template>
-    <TransitionRoot as="template" :show="open">
-        <Dialog as="div" class="relative z-30" @close="open = false">
+    <TransitionRoot as="template" :show="cartStore.isOpen">
+        <Dialog as="div" class="relative z-30" @close="cartStore.isOpen = false">
             <TransitionChild as="template" enter="ease-in-out duration-500" enter-from="opacity-0" enter-to="opacity-100" leave="ease-in-out duration-500" leave-from="opacity-100" leave-to="opacity-0">
                 <div class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity" />
             </TransitionChild>
@@ -48,7 +48,7 @@ const open = ref(true)
                                         <div class="flex items-start justify-between">
                                             <DialogTitle class="text-lg font-medium text-gray-900">Shopping cart</DialogTitle>
                                             <div class="ml-3 flex h-7 items-center">
-                                                <button type="button" class="relative -m-2 p-2 text-gray-400 hover:text-gray-500" @click="open = false">
+                                                <button type="button" class="relative -m-2 p-2 text-gray-400 hover:text-gray-500" @click="cartStore.isOpen = false">
                                                     <span class="absolute -inset-0.5" />
                                                     <span class="sr-only">Close panel</span>
                                                     <XMarkIcon class="h-6 w-6" aria-hidden="true" />
@@ -100,7 +100,7 @@ const open = ref(true)
                                         <div class="mt-6 flex justify-center text-center text-sm text-gray-500">
                                             <p>
                                                 or{{ ' ' }}
-                                                <button type="button" class="font-medium text-indigo-600 hover:text-indigo-500" @click="open = false">
+                                                <button type="button" class="font-medium text-indigo-600 hover:text-indigo-500" @click="cartStore.isOpen = false">
                                                     Continue Shopping
                                                     <span aria-hidden="true"> &rarr;</span>
                                                 </button>

@@ -9,6 +9,9 @@ onMounted(() => {
 onUnmounted(() => {
     window.removeEventListener('scroll', handleScroll)
 })
+
+const cartStore = useCartStore()
+
 </script>
 
 <template>
@@ -22,12 +25,15 @@ onUnmounted(() => {
                 <nav>
                     <ul class="flex space-x-8">
                         <li><NuxtLink to="/products">Shop</NuxtLink></li>
-                        <li><NuxtLink to="/cart">🛒 Cart</NuxtLink></li>
+                        <li><NuxtLink to="/cart">Cart</NuxtLink></li>
+                        <li><button @click="cartStore.toggle">🛒</button></li>
                     </ul>
                 </nav>
             </div>
         </div>
     </header>
+
+    <SlideOverCart />
 
     <main class="pt-24">
         <slot />
