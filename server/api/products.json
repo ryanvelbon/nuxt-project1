@@ -1,0 +1,98 @@
+[
+  {
+    "id": 1,
+    "title": "Cozy Wool Beanie",
+    "price": 39.99,
+    "description": "Stay warm and stylish with this ultra-soft wool beanie. Available in multiple colors.",
+    "category": "Accessories",
+    "image": "https://placehold.co/400",
+    "rating": {
+      "rate": 4.7,
+      "count": 250
+    }
+  },
+  {
+    "id": 2,
+    "title": "Faded Wash Denim Jacket",
+    "price": 79.95,
+    "description": "This classic denim jacket features a relaxed fit and faded wash for a vintage look.",
+    "category": "Jackets",
+    "image": "https://placehold.co/400",
+    "rating": {
+      "rate": 4.2,
+      "count": 180
+    }
+  },
+  {
+    "id": 3,
+    "title": "Floral Print Maxi Dress",
+    "price": 54.99,
+    "description": "Flowy and feminine, this maxi dress features a vibrant floral print and flattering silhouette.",
+    "category": "Dresses",
+    "image": "https://placehold.co/400",
+    "rating": {
+      "rate": 4.5,
+      "count": 150
+    }
+  },
+  {
+    "id": 4,
+    "title": "Organic Cotton T-Shirt",
+    "price": 24.99,
+    "description": "Made from sustainable organic cotton, this soft and comfortable t-shirt is perfect for everyday wear.",
+    "category": "Tops",
+    "image": "https://placehold.co/400",
+    "rating": {
+      "rate": 4.8,
+      "count": 420
+    }
+  },
+  {
+    "id": 5,
+    "title": "Ripped Boyfriend Jeans",
+    "price": 69.95,
+    "description": "Channel your inner rockstar with these ripped boyfriend jeans featuring a relaxed fit and distressed details.",
+    "category": "Bottoms",
+    "image": "https://placehold.co/400",
+    "rating": {
+      "rate": 3.8,
+      "count": 110
+    }
+  },
+  {
+    "id": 6,
+    "title": "Striped Crewneck Sweater",
+    "price": 49.99,
+    "description": "This timeless striped sweater is perfect for layering and keeping warm in style.",
+    "category": "Sweaters",
+    "image": "https://placehold.co/400",
+    "rating": {
+      "rate": 4.3,
+      "count": 210
+    }
+  },
+  {
+    "id": 7,
+    "title": "Leather Tote Bag",
+    "price": 149.95,
+    "description": "Made from genuine leather, this spacious tote bag is perfect for carrying all your essentials.",
+    "category": "Accessories",
+    "image": "https://placehold.co/400",
+    "rating": {
+      "rate": 4.9,
+      "count": 80
+    }
+  },
+  {
+    "id": 8,
+    "title": "Activewear Leggings",
+    "price": 34.99,
+    "description": "These high-waisted leggings are perfect for working out or running errands in style.",
+    "category": "Activewear",
+    "image": "https://placehold.co/400",
+    "rating": {
+      "rate": 4.1,
+      "count": 135
+    }
+  }
+]
